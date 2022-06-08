@@ -6,9 +6,9 @@
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         tmp = None
-        while head:
-            curr = head
-            head = head.next
+        while head: #итерация к последней ноде списка
+            curr = head #сохраняем указатель на текущую ноду
+            head = head.next #делаем шаг к следующей ноде
             curr.next = tmp
-            tmp = curr
+            tmp = curr #добавление ноды в перевернутый список
         return tmp
